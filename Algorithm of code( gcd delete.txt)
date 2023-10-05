@@ -1,0 +1,36 @@
+Algorithm of gcd(a,b) by Euclid algo (gcddelete.cpp)
+------------------------------------
+using function
+----------
+
+1st block
+-------
+construct gcd function gcd ( a,b )
+-------
+ while ( remainder > 0 )
+        dividend = b
+        divisor =  a%b           [this applies to divisor as well  a/b is not done so this is substituted step]
+        dividend updated = divisor
+        divisor updated a = b   =>  divisor updated = (current dividend) % (prev divisor)
+
+                                    ( prev dividend = b ; current dividend = a%b )
+                                     .
+                                    . .  prev divisor = a%b ; current divisor = (b)%((a%b))
+
+ once the loop completes   ( the while condition becomes true )
+
+       cout << latest divisor << endl;
+
+ 2 nd block
+ ----------
+ int main()
+ {
+      if (dividend > divisor)
+      {
+         cout << gcd ( a, b) <<endl;
+      }
+      else
+      {
+         cout << " learn gcd and then try "<<endl;
+      }
+ }

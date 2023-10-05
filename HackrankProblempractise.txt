@@ -1,0 +1,33 @@
+# 30 problems on the hackerrank
+1) Hello world
+--------------
+   - easy problem
+   - understanding cout,cin in the programme
+
+2) Datatype Problem
+-------------------
+   - understanding of the double type input , string input
+   - double has the precision of more than one after pointer
+   - constraint of the ' cin >> ' in taking input(in strings) / overcome with getline(cin,inputvariable)
+
+   getline() reads the input string
+   . line by line
+   . read space too
+   . stores in the inputvariable
+   . ' cin >> ' then stores the inputvariable in " main () " function
+
+3) Operators problem
+--------------------
+   - understanding the use of operators , mathematical
+   - void function is defined
+   - understanding the use of  ' cin.ignore() ' , it clears the buffer of input stream
+    " What is the input Buffer ? "
+     Ans : A temporary storage area/space in RAM is called buffer.When input is taken by the ' cin ' input container ,
+           it is not directly sent to "RAM" t rather "OS" [ as temp storage in RAM ].
+           Our objective is to send 'right input' in 'right container' to process by CPU .Thus to neglect inter-mixing
+           of the input buffer , we use 'cin.ignore()'
+
+           Story: when any "input" is given to processor it acts as "interruption" to the processor .
+                  Processor sets priority to every "input" thus , storing it in temporary space of the "RAM".
+                  The right block to get processed in right time , we need to make sure the "input" goes to right
+                  buffer space of the "RAM".

@@ -1,0 +1,106 @@
+
+1) Decimal to binary
+---------------
+1. int decimal_to_binary(input(int num))
+2. extract last digit ( num % 2 )
+3. continue extracting digit = digit - 1 :  ( num / 2 ) , digit --
+4. initialise binary num = 0 , i = 0
+5. while ( num != 0 )
+  {
+      extract last digit ( num % 2 )                                         |        [ since binary thus by 2 ]
+      continue extracting last digit = digit -1 : ( num / 2 ) , digit--      |
+      output = ( last digit ) * i;                                           |
+      i = i * 10;                                                            |
+
+  }
+  return output;
+
+ Method two ( bit of the number )
+ 1. take the decimal number ;
+ 2. take the bit of the number ;
+ 3. we know that if bit & 1 then two output arise
+    3a) Either 1 , if one then the bit of num = odd
+    3b) OR 0 , if zero then bit of the num = even
+ 4. accordingly increment the number
+ 5. increase the manipulation of the num
+
+
+
+
+2) Adding two binary numbers
+-------------------------
+1. input(bin) first number = a; input(bin) second number = b;
+2. int binsum ( a+b )
+   {
+     result = digit(a) + digit(b);
+     digit = digit - i : i--
+     if ( (digit(a) == 1 AND digit(b) == 0) OR ( digit(a) == 0 AND digit(b) == 1))
+          {
+             result = '1';
+          }
+     elseif(digit(a) AND digit(b) == 1)          {
+             result = '0';
+             carry = '1';
+          }
+      else
+         {
+            result = '0';
+         }
+      }
+
+   Crux
+   1. when binary converted to decimal
+      1a) method ( digit ) = digit % 10(last digit) , digit / 10(leftout num)
+      1b) method ( binary ) = bit = n & 1(last digit), n>>1(leftout num)
+   2. when decimal to binary
+      just in the representation of the digit form , use (digit%2,digit/2)
+
+   Recurssion
+   ----------
+   Concepts
+   [
+      1. If green box in the problem then RLOP( recurssive leap of faith ) else different
+      2. Base case ( for the case where threshold exists  )
+      3. Manipulations of the algorithm used
+      4. General algorithm used in = Divide and conquer
+
+      Time complexity is variable
+
+
+   Internal workking of recurssion
+   -  Working  stack format
+
+   ]
+      Problems
+   ----------
+
+   Problems (Lecture function)
+   1. concept (when a function us called inside a main function , function creates a clone of the
+               variable with the value thus the variable in main function is unaffected)
+
+             a) void update(int a)
+                {
+                 a = a/2;
+                }
+                int main()
+                {
+                 int a = 10;
+                 update(a);   (clone of the variable 'a' is created)
+                 cout<< a <<endl;
+                }
+
+                ans [ the output is 10 ]
+
+             b) int update(int a)
+                {
+                 a -= 5;
+                 return a;
+                }
+                int main()
+                {
+                 int a = 15;
+                 update(a);
+                 cout<< a <<endl;
+                }
+
+                ans [ 10 15 ]
